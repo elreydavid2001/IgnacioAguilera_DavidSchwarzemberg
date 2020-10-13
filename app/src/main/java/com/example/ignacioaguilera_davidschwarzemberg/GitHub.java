@@ -2,6 +2,7 @@ package com.example.ignacioaguilera_davidschwarzemberg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -28,24 +29,27 @@ public class GitHub extends AppCompatActivity {
 
         spnLibros.setAdapter(adapt);
     }
-    public void Precios(View v)
-    {
-        if(spnLibros.getSelectedItem().toString().equals("Farenheith"))
-        {
-            int valorFarenheith = 5000;
-            txt.setText("El valor de el libro es: "+valorFarenheith);
-        }
-
-        else if(spnLibros.getSelectedItem().toString().equals("Revival"))
-        {
-            int valorRevival = 12000;
-            txt.setText("El valor del libro es: "+valorRevival);
-        }
-
-        else if (spnLibros.getSelectedItem().toString().equals("El Alquimista"))
-        {
+    public void Precios(View v) {
+        if (spnLibros.getSelectedItem().toString().equals("Farenheith")) {
+            int valorFarenheith = 7000;
+            txt.setTextColor(Color.GREEN);
+            txt.setText("El valor de el libro es: " + valorFarenheith);
+        } else if (spnLibros.getSelectedItem().toString().equals("Revival")) {
+            int valorRevival = 22000;
+            txt.setTextColor(Color.GREEN);
+            txt.setText("El valor del libro es: " + valorRevival);
+        } else if (spnLibros.getSelectedItem().toString().equals("El Alquimista")) {
             int valorElAlquimista = 45000;
-            txt.setText("El valor del libro es: "+valorElAlquimista);
+            txt.setTextColor(Color.GREEN);
+            txt.setText("El valor del libro es: " + valorElAlquimista);
+        } else if (spnLibros.getSelectedItem().toString().equals("El Poder")) {
+            int valorElPoder = 88000;
+            txt.setTextColor(Color.GREEN);
+            txt.setText("El valor del libro es: " + valorElPoder);
+        } else if (spnLibros.getSelectedItem().toString().equals("Despertar")) {
+            int valorDespertar = 156000;
+            txt.setTextColor(Color.GREEN);
+            txt.setText("El valor del libro es: " + valorDespertar);
         }
     }
 }
